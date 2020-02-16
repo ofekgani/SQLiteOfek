@@ -54,7 +54,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/ed_math"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="6"
@@ -83,7 +83,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editText6"
+                android:id="@+id/ed_english"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="6"
@@ -130,7 +130,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/ed_history"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="6"
@@ -160,7 +160,7 @@
 
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/ed_physics"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="6"
@@ -192,11 +192,11 @@
             android:layout_weight="0.5" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_back"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="2"
-            android:text="Button" />
+            android:text="BACK" />
 
         <Space
             android:layout_width="0dp"
@@ -204,11 +204,11 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_next2"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="2"
-            android:text="Button" />
+            android:text="NEXT" />
 
         <Space
             android:layout_width="0dp"
