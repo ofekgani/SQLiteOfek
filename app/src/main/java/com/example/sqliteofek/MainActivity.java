@@ -2,22 +2,28 @@ package com.example.sqliteofek;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText ed_name, ed_address, ed_phone, ed_fatherName, ed_fatherPhone, ed_motherName, ed_motherPhone ,ed_homePhone;
+    ListView listView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ed_name = findViewById(R.id.ed_name);
-        ed_address = findViewById(R.id.ed_address);
-        ed_phone = findViewById(R.id.ed_phone);
-        ed_homePhone = findViewById(R.id.ed_phoneHome);
+        listView = findViewById(R.id.list);
 
+    }
+
+    public void onClick_next(View view) {
+        Intent intent = new Intent(this,EditStudentsActivity.class);
+        startActivity(intent);
     }
 }
