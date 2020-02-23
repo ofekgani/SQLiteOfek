@@ -26,17 +26,27 @@ public class HelperDB extends SQLiteOpenHelper {
         strCreate += " "+Students.FATHER_NAME+"TEXT,";
         strCreate += " "+Students.FATHER_PHONE+"TEXT,";
         strCreate += " "+Students.MOTHER_NAME+"TEXT,";
-        strCreate += " "+Students.MOTHER_PHONE+"TEXT,";
+        strCreate += " "+Students.MOTHER_PHONE+"TEXT";
+        strCreate += ");";
+        db.execSQL(strCreate);
 
         strCreate = "Create Table "+ Grades.TABLE_Grades;
         strCreate +="("+ Grades.KEY_ID+"INTEGER PRIMARY KEY,";
         strCreate += " "+Grades.STUDENT_NAME+"TEXT,";
         strCreate += " "+Grades.SUBJECT+"TEXT,";
-        strCreate += " "+Grades.QUARTER+"TEXT,";
+        strCreate += " "+Grades.QUARTER+"TEXT";
+        strCreate += ");";
+        db.execSQL(strCreate);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        strDelete = "DROP TABLE IF EXISTS "+ Students.TABLE_Students;
+        db.execSQL(strDelete);
 
+        strDelete = "DROP TABLE IF EXISTS "+Grades.TABLE_Grades;
+        db.execSQL(strDelete);
+
+        onCreate(db);
     }
 }

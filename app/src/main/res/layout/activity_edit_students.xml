@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".EditStudentsActivity">
 
     <Space
         android:layout_width="wrap_content"
@@ -402,7 +402,8 @@
                 android:layout_gravity="center"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:text="Back" />
+                android:text="Back"
+                android:onClick="onClick_back1"/>
 
             <Space
                 android:layout_width="wrap_content"
