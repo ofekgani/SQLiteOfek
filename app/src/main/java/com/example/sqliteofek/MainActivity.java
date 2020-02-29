@@ -2,6 +2,7 @@ package com.example.sqliteofek;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -62,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         db.close();
         adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, tbl);
         listView.setAdapter(adp);
-
     }
 
     public void onClick_next(View view) {
