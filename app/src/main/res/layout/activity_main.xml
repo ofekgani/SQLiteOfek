@@ -21,7 +21,7 @@
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="24dp"
-        android:text="TextView" />
+        android:text="SQL Project" />
 
     <Space
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="40"
+        android:layout_weight="30"
         android:orientation="horizontal">
 
         <Space
@@ -43,25 +43,36 @@
             android:id="@+id/list"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:listSelector="@android:color/holo_blue_light"
             android:layout_weight="10"/>
     </LinearLayout>
 
+
     <Space
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btn_showInformation"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"/>
-
-    <TextView
-        android:id="@+id/tv_error"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:text="" />
+        android:layout_weight="1"
+        android:onClick="onClick_show"
+        android:text="Show information" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btn_showGrades"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onClick_showGrades"
+        android:text="Show Grades" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -80,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="New"
-            android:onClick="onClick_next"/>
+            android:onClick="onClick_new"/>
 
         <Space
             android:layout_width="wrap_content"
@@ -92,7 +103,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick_edit"
                 android:text="Edit" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_new2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick_delete"
+            android:text="Delete" />
 
         <Space
             android:layout_width="wrap_content"

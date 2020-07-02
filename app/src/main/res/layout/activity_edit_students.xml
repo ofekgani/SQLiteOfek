@@ -21,7 +21,7 @@
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="24dp"
-        android:text="TextView" />
+        android:text="Edit Student" />
 
     <Space
         android:layout_width="match_parent"
@@ -188,7 +188,7 @@
                     android:layout_weight="6"
                     android:ems="10"
                     android:hint="Phone Home"
-                    android:inputType="textPersonName" />
+                    android:inputType="phone" />
 
 
             </LinearLayout>
@@ -411,18 +411,20 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btn_next1"
+                android:id="@+id/btn_back"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:text="Next" />
+                android:onClick="onClick_save"
+                android:text="Save" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
+
         </LinearLayout>
 
         <Space

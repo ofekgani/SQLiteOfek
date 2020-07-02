@@ -10,17 +10,37 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"/>
+        android:layout_weight="1"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="10"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="36dp"
-        android:text="TextView" />
+        android:text="Grades  student" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="180dp"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:text="order by grade"
+        android:onClick="onClick_order"/>
+
+    <ListView
+        android:id="@+id/gradeList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"/>
+
 
     <Space
         android:layout_width="match_parent"
@@ -30,219 +50,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
-        android:orientation="horizontal">
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="6"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:text="Subject:"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/ed_subject1"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:ems="10"
-                android:inputType="number" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="6"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:text="Quarter:"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/ed_Quarter1"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:ems="10"
-                android:inputType="number" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="6"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:text="Grade:"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/ed_Grade1"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="3"
-                android:ems="10"
-                android:inputType="number" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
-        android:orientation="horizontal">
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="6"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView69"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:text="Subject:"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/ed_subject2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="6"
-                android:ems="10"
-                android:inputType="number" />
-        </LinearLayout>
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="6"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView43"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:text="Quarter:"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
-
-            <EditText
-                android:id="@+id/ed_Quarter2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="6"
-                android:ems="10"
-                android:inputType="number" />
-        </LinearLayout>
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="6"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5"
-                android:text="Grade:"
-                android:textSize="24dp"
-                android:textStyle="bold" />
-
-
-            <EditText
-                android:id="@+id/ed_Grade2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="6"
-                android:ems="10"
-                android:inputType="number" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="15"
         android:orientation="horizontal">
 
         <Space
@@ -260,18 +68,17 @@
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="5"
+                android:layout_weight="2"
                 android:text="Subject:"
                 android:textSize="24dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/ed_subject3"
+                android:id="@+id/ed_subject"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="6"
-                android:ems="10"
-                android:inputType="number" />
+                android:layout_weight="3"
+                android:ems="10" />
         </LinearLayout>
 
         <Space
@@ -289,17 +96,17 @@
                 android:id="@+id/textView438"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="5"
+                android:layout_weight="2"
                 android:text="Quarter:"
                 android:textSize="24dp"
                 android:textStyle="bold" />
 
 
             <EditText
-                android:id="@+id/ed_Quarter3"
+                android:id="@+id/ed_quarter"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="6"
+                android:layout_weight="3"
                 android:ems="10"
                 android:inputType="number" />
         </LinearLayout>
@@ -320,17 +127,17 @@
                 android:id="@+id/textView83"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="5"
+                android:layout_weight="2"
                 android:text="Grade:"
                 android:textSize="24dp"
                 android:textStyle="bold" />
 
 
             <EditText
-                android:id="@+id/ed_Grade3"
+                android:id="@+id/ed_grade"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="6"
+                android:layout_weight="3"
                 android:ems="10"
                 android:inputType="number" />
         </LinearLayout>
@@ -345,7 +152,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="10"
         android:orientation="horizontal">
 
         <Space
@@ -354,28 +161,58 @@
             android:layout_weight="0.5" />
 
         <Button
-            android:id="@+id/btn_back2"
+            android:id="@+id/btn_backToStudent"
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="2"
-            android:text="BACK" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/btn_next2"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_weight="2"
-            android:text="NEXT" />
+            android:text="back"
+            android:onClick="onClick_backToStudent"/>
 
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5" />
+
+        <Button
+            android:id="@+id/btn_deleteGrade"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:text="Delete"
+            android:onClick="onClick_deleteGrade"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <Button
+            android:id="@+id/btn_saveGrade"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:text="Save"
+            android:onClick="onClick_saveGrade"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+        <Button
+            android:id="@+id/btn_addGrade"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="2"
+            android:text="Add"
+            android:onClick="onClick_addGrade"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+
     </LinearLayout>
 
 </LinearLayout>

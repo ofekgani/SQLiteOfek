@@ -1,5 +1,6 @@
 package com.example.sqliteofek;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -7,6 +8,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class HelperDB extends SQLiteOpenHelper {
+    /**
+     * @author Ofek gani
+     * @version 1.0
+     * @since 02/7
+     */
     private static final String DATABASE_NAME = "dbexam.db";
     private static final int DATABASE_VERSION = 1;
     String strCreate,strDelete;
@@ -16,25 +22,29 @@ public class HelperDB extends SQLiteOpenHelper {
     }
 
     @Override
+    /**
+     * build the table
+     */
     public void onCreate(SQLiteDatabase db) {
         strCreate = "Create Table "+ Students.TABLE_Students;
-        strCreate +="("+ Students.KEY_ID+"INTEGER PRIMARY KEY,";
-        strCreate += " "+Students.NAME+"TEXT,";
-        strCreate += " "+Students.ADDRESS+"TEXT,";
-        strCreate += " "+Students.PHONE+"TEXT,";
-        strCreate += " "+Students.HOME_PHONE+"TEXT,";
-        strCreate += " "+Students.FATHER_NAME+"TEXT,";
-        strCreate += " "+Students.FATHER_PHONE+"TEXT,";
-        strCreate += " "+Students.MOTHER_NAME+"TEXT,";
-        strCreate += " "+Students.MOTHER_PHONE+"TEXT";
+        strCreate +="("+ Students.KEY_ID+" INTEGER PRIMARY KEY,";
+        strCreate += " "+Students.NAME+" TEXT,";
+        strCreate += " "+Students.ADDRESS+" TEXT,";
+        strCreate += " "+Students.PHONE+" TEXT,";
+        strCreate += " "+Students.HOME_PHONE+" TEXT,";
+        strCreate += " "+Students.FATHER_NAME+" TEXT,";
+        strCreate += " "+Students.FATHER_PHONE+" TEXT,";
+        strCreate += " "+Students.MOTHER_NAME+" TEXT,";
+        strCreate += " "+Students.MOTHER_PHONE+" TEXT";
         strCreate += ");";
         db.execSQL(strCreate);
 
         strCreate = "Create Table "+ Grades.TABLE_Grades;
-        strCreate +="("+ Grades.KEY_ID+"INTEGER PRIMARY KEY,";
-        strCreate += " "+Grades.STUDENT_NAME+"TEXT,";
-        strCreate += " "+Grades.SUBJECT+"TEXT,";
-        strCreate += " "+Grades.QUARTER+"TEXT";
+        strCreate +="("+ Grades.KEY_ID+" INTEGER PRIMARY KEY,";
+        strCreate += " "+Grades.STUDENT_ID+" TEXT,";
+        strCreate += " "+Grades.GRADE+" TEXT,";
+        strCreate += " "+Grades.SUBJECT+" TEXT,";
+        strCreate += " "+Grades.QUARTER+" TEXT";
         strCreate += ");";
         db.execSQL(strCreate);
     }
